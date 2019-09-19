@@ -5,12 +5,12 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-  compileSdkVersion safeExtGet('compileSdkVersion', 27)
-  buildToolsVersion safeExtGet('buildToolsVersion', '27.0.3')
+  compileSdkVersion safeExtGet('compileSdkVersion', 28)
+  buildToolsVersion safeExtGet('buildToolsVersion', '28.0.3')
 
   defaultConfig {
-    minSdkVersion safeExtGet('minSdkVersion', 16)
-    targetSdkVersion safeExtGet('targetSdkVersion', 26)
+    minSdkVersion safeExtGet('minSdkVersion', 18)
+    targetSdkVersion safeExtGet('targetSdkVersion', 28)
   }
   
   packagingOptions {
@@ -32,6 +32,6 @@ android {
 }
 
 dependencies {
-  implementation "com.facebook.react:react-native:${safeExtGet('reactNativeVersion', '+')}"
+  implementation 'com.facebook.react:react-native:+'
   implementation 'com.google.android.gms:play-services-auth:16.0.1'
 }
